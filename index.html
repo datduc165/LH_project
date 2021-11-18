@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script src="https://kit.fontawesome.com/9b678c92ee.js" crossorigin="anonymous"></script>
+    <title>Lien-Hung</title>
+</head>
+ <!--HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH-->
+<body>
+    <header>
+         <!--for=... in <label> will look for id-->
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span>
+                    
+                </span>
+    
+            </label>
+        <h1 class="logo">LOGO</h1>
+        <!--input have the same id as class because later on we want to use "for" in <label> below to look for it-->
+        <input  type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#booking-section">Booking</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+ <!--HHHHHHHHHHHHHHHHHHHHHHHHHH
+
+    HHHHHHHHHHHHHHHHHHHHHHHHHHH-->
+    <main>
+        
+        <section class="home" id="home">
+            <div class="content">
+                <h3>Adventure begin now</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#booking-section" class="btn">Book now</a>
+            </div>
+            <div class="controls">
+                <span class="vid-btn active" data-src="../image/road.mp4"></span>
+                <span class="vid-btn" data-src="../image/city_night_1.mp4"></span>
+                <span class="vid-btn" data-src="../image/farm.mp4"></span>
+            </div>
+            <div class="video-container">
+                <video src="../image/road.mp4" id="video-slider" loop autoplay muted>
+
+                </video>
+            </div>
+        </section>
+        <section class="booking" id="booking-section">
+           
+            <div class="row">
+                <div class="image">
+                    <img src="image/travel.png">
+                </div>
+                
+                <form action="">
+                    <h1 class="heading">
+                        <div class="prefix">
+                            <span>b</span>
+                            <span>o</span>
+                            <span>o</span>
+                            <span>k</span>
+                        </div>
+                        <div class="suffix">
+                            <span>n</span>
+                            <span>o</span>
+                            <span>w</span>
+                        </div>
+                    </h1>
+                    <div class="inputbox">
+                        <h3>departure</h3>
+                        <input type="text" placeholder="place name">
+                    </div>    
+                    <div class="inputbox">
+                        <h3>arrivals</h3>
+                        <input type="text" placeholder="place name">
+                    </div>  
+                    <div class="inputbox">
+                        <h3>leaving date</h3>
+                        <input type="date" >
+                    </div>  
+                    <input type="submit" class="btn" value="book now">
+                </form>
+            </div>
+        </section>
+        <section class="service">
+            <h1 class="heading">
+                <div class="prefix">
+                    <span>s</span>
+                    <span>e</span>
+                    <span>r</span>
+                    <span>v</span>
+                    <span>i</span>
+                    <span>c</span>
+                    <span>e</span>
+                </div>
+               
+            </h1>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                    <h3>Affordable price</h3>
+                </div>
+                <div class="grid-item">
+                    <i class="fa fa-car" aria-hidden="true"></i>
+                    <h3>Free transport</h3>
+                    <p class="tooltip">*condition apply
+                        <span class="tooltiptext">free transport within 30km in the city</span>
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <i class="fa fa-calendar-times-o" aria-hidden="true"></i>
+                    <h3>Free cancelation before 1 day</h3>
+                </div>
+            </div>
+        </section>
+      
+    </main>
+<!--HHHHHHHHHHHHHHHHHHHHHHHHHH
+
+    HHHHHHHHHHHHHHHHHHHHHHHHHHH-->   
+    <footer>
+        
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956.9794302967898!2d109.18324182917738!3d12.248744799458306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31705d7f143b3c1f%3A0xf1748da97eb3f4c9!2zNzcgVGjDoWkgTmd1ecOqbiwgUGjGsOG7m2MgVMOibiwgVGjDoG5oIHBo4buRIE5oYSBUcmFuZywgS2jDoW5oIEjDsmEgNjUwMDAwLCBWaeG7h3QgTmFt!5e1!3m2!1svi!2sau!4v1627818678350!5m2!1svi!2sau" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+       
+        <section class="contact" id="contact-section"> 
+            <div class="email-form">
+                <form action="">
+                    <h1 class="contact-heading">
+                        Contact Us
+                    </h1>
+                    <div class="inputbox">
+                        <input type="text" required>
+                        <label>Name</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="number" required>
+                        <label>Phone</label>
+                    </div>
+                    <div class="inputbox">
+                        <textarea required name="" id=""></textarea>
+                        <label>Message</label>
+                    </div>
+                    <input type="submit" class="btn" value="send message">
+                </form>
+            </div>
+            <div class="address">
+                <h2> Address </h2>
+                <ul>
+                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>Chi nhanh Nha Trang:<br> 77 XXXXXXX,<br> XXX, XXX, <br>Tp Nha Trang</li>
+                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>Chi nhanh Sai Gon:<br> 88 XXXXXX,<br> XXXX,<br> Tp Ho Chi Minh</li>
+    
+                </ul>
+          
+                <ul>
+                    <li><i class="fa fa-mobile" aria-hidden="true"></i>09 XXX XXX XXX</li>
+                    <li><i class="fa fa-phone-square" aria-hidden="true"></i> 01 XXX XXX</li>
+                    <li><i class="fas fa-envelope"></i>xyz@gmail.com</li>
+                    <h3>Follow Us</h3>
+                    <li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>, <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>             
+                   
+                </ul>
+            </div>
+            
+          
+        </section>
+
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

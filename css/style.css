@@ -1,0 +1,530 @@
+/*---------------------------
+HEADER
+ABOUT-page ->need to finish
+MAIN
+BOOKING
+SERVICE
+FOOTER
+MEDIA
+----------------------------*/
+
+*{
+    
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    background: rgb(245, 241, 241);
+}
+h1,h2,h3{
+    text-transform: uppercase;
+}
+textarea,input{
+    outline:none;
+}
+.heading{
+    text-align: center;
+    padding:1.1rem 0;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:1.2rem;
+}
+.heading span{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    background: rgb(247, 217, 161);
+    color: orange;
+    border-radius: .4rem;
+    padding:.2rem 1rem;
+    margin:0 .15rem;  
+}
+#special{
+    padding:.2rem;
+    background: none;
+}
+section{
+    padding:1rem 9%;
+}
+/*---------------------------
+            HEADER
+----------------------------*/
+header{
+    background: #4c4c4de1;
+    text-align: center;
+    position: fixed;
+    z-index:999;
+    width:100%;
+    height: 7%;
+    padding: 15px 0;
+}
+header h1{
+    color:white;
+    text-shadow:1px 1px rgb(179, 167, 167);
+    font-size: 3em;
+}
+.nav-toggle{
+    display:none;
+}
+.nav-toggle-label{
+    position: absolute;
+    top:0;
+    left:0;
+    margin:0 1em;
+    background: red;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    cursor: pointer;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display:block;
+    background: white;
+    height:2.5px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content:'';
+    position:absolute;
+}
+.nav-toggle-label span::before{
+    bottom:6px;
+}
+.nav-toggle-label span::after{
+    top:6px;
+}
+
+nav{
+    position:absolute;
+    top:100%;
+    padding-top: 10px;
+    left:0;
+    width: 100%;
+    background: #4c4c4de1;
+    transform: scale(1,0);
+   
+    transform-origin:top;
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    text-align: center;
+    
+}
+nav a {
+    display:block;
+    border-radius: .5rem;
+    background: rgb(109, 108, 108);
+    padding:1.2rem;
+    margin:1rem;
+    color:rgb(252, 194, 5);
+    text-decoration: none;
+    font-size:1.1rem;
+    text-transform: uppercase;
+    opacity:0;
+    transition: opacity 100ms ease-in-out 200ms; 
+}
+nav li:hover,focus{
+    color:rgb(255, 123, 0);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-toggle:checked ~ nav{
+    transform:scale(1);
+}
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 200ms;
+}
+/*---------------------------
+            ABOUT-Page
+----------------------------*/
+.info{
+    position: fixed;
+    top:10%;
+    z-index: 999;
+}
+/*---------------------------
+            MAIN
+----------------------------*/
+
+.btn{
+    margin:20px 0;
+    padding:10px;
+    display:inline-block;
+    border: 3px solid orange;
+    color:orange;
+    text-transform: uppercase;
+    font-weight:bold;
+    font-size: 1.3rem;
+    cursor:pointer;
+    background: none;
+}
+
+.btn:visited{
+    color:organe;
+}
+.btn:hover{
+    background: orange;
+    color:white;
+}
+.btn{
+    text-decoration: none;
+}
+
+.home{
+    min-height:100vh ;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position:relative;
+    z-index:0;
+}
+.home .content{
+    text-align:center;
+}
+.home h3{
+    font-size: 3rem;
+    color:rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-shadow: 0 0.3rem 0.5rem rgb(0, 0, 0);
+}
+
+.home .video-container video{
+    position: absolute;
+    top:0;
+    left:0;
+   
+    z-index:-1;
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+}
+.home .controls {
+    padding: 7px;
+    border-radius: 5rem;
+    background: rgba(0,0,0,.6);
+    position: relative;
+    top: 7rem;
+}
+.home .controls .vid-btn{
+    height:1rem;
+    width:1rem;
+    display:inline-block;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    cursor:pointer;
+    margin:.4rem .6rem .1rem;
+}
+
+.home .controls .vid-btn.active{
+    background: orange; 
+}
+/*---------------------------
+            BOOKING
+----------------------------*/
+.booking{
+    
+    min-height: 100vh;
+   
+}
+ form{
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 0 1.5rem rgba(0,0,0,.6);
+    border-radius: .5rem;
+}
+.booking .row{
+    display:flex;
+    flex-wrap: wrap;
+    padding:5rem 0;
+    align-items: center;
+    justify-content: center;
+    
+}
+.booking .row .image{
+    flex:1 1 20rem;
+}
+.booking .row img{
+  width:100%;
+
+}
+.inputbox{
+    padding: .5rem .7rem .5rem 0;
+    display:block;
+    
+}
+.inputbox input{
+    width:100%;
+    padding: .6rem;
+    border: .1rem solid rgb(255, 217, 3);
+    font-size: 1.2rem;
+    color:#333;
+    cursor: pointer;
+}
+/*---------------------------
+           SERVICE
+----------------------------*/
+.service{
+    background: white;
+    border:3px solid rgb(128, 30, 0);
+}
+.service i{
+    color:orange;
+    font-size: 3rem;
+}
+.service .grid-container{
+    display:grid;
+    grid-template-columns: auto auto auto;
+}
+.grid-item {
+    text-align: center;
+    padding: 2rem;
+}
+.grid-item i{
+    padding:1.5rem;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+/*---------------------------
+           FOOTER
+----------------------------*/
+footer{
+    background: #4c4c4d;
+    position: relative;
+    top: 150px;
+}
+.contact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact .email-form{
+    width: 50%;
+    background:rgb(255, 255, 255);
+    border: .1rem solid white;
+    border-radius:  .5rem;
+}
+.email-form textarea, .email-form .inputbox input{
+    border:none;
+    border-bottom: .1rem solid rgb(255, 217, 3);
+    margin-bottom: 10px;
+    width: 100%;
+   
+}
+.email-form .inputbox{
+    position:relative;
+}
+.email-form .inputbox input:focus ~ label,
+.email-form .inputbox input:valid ~ label,
+.email-form .inputbox textarea:focus ~ label,
+.email-form .inputbox textarea:focus ~ label{
+    top:-.45rem;
+    color:orange;
+    font-size:1.1rem;
+
+}
+.email-form textarea{
+    resize:none;
+    height:5rem;
+    width:100%;
+    padding:.7rem;
+}
+.email-form label{
+    position: absolute;
+    top:1.7rem; left:0;
+    color:rgb(56, 55, 55);
+    transition: .2s linear;
+
+}
+
+.contact-heading{
+    color:orange;
+    padding-bottom: 10px;
+}
+.address li i{
+    color:orange;
+    font-size:1.7rem;
+    padding: 0 5px;
+}
+.address h2{
+    color:orange;
+    font-size: 1.7rem;
+    padding-bottom: .5rem;
+}
+.address h3{
+    color:orange;
+    padding-bottom: .5rem;
+    font-size: 1.4rem;
+}
+.address li{
+    color: white;
+    font-size:1.2em;
+    padding-bottom: .7rem;
+    list-style: none;
+}
+
+.address ul li a i:hover{
+    color:rgb(255, 255, 255) ;
+}
+.address{
+    padding:1rem;
+    margin-left:2rem;
+}
+
+/*---------------------------
+            MEDIA VERSION
+----------------------------*/
+
+@media screen and (min-width: 750px){
+    .nav-toggle-label{
+        display:none;
+    }
+    header{
+        display:grid;
+        align-content: center;
+        grid-template-columns: 1fr auto minmax(500px,3fr) 1fr;
+    }
+    .logo{
+        grid-column: 2 / 3;
+    }
+    nav{
+        all: unset;
+        grid-column: 3 / 4;
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav ul {
+        display: flex;
+    }
+    nav a {
+        padding:0;
+        margin:0;
+        background: none;
+        opacity: 1;
+        position: relative;
+        font-size:1.2rem;
+    }
+    nav a::before{
+        content:'';
+        display:block;
+        background: rgb(255, 208, 0);
+        height:3px;
+        position:absolute;
+        bottom:-0.2em;
+        left:0;
+        right:0;
+        transform: scale(0,1);
+        transition: transform ease-in-out 150ms;
+    }
+
+    nav a:hover::before{
+        transform: scale(1);
+    }
+    nav a:focus::before{
+        transform: scale(1);
+    }
+    nav ul li{
+        margin-bottom:0;
+        margin-left: 3em;
+    }
+
+   
+    
+}
+
+@media (max-width:750px){
+    .contact{
+        flex-flow: column;
+   
+    }
+    .contact .email-form {
+     width: 100%;
+    }
+    .contact .email-form form input{
+        width:100%;
+        margin: 0 0rem;
+    }
+    .contact .email-form form input[type="submit"]{
+        width:100%;
+    }
+    .service .grid-container{
+        grid-template-columns: auto;
+    }
+}
+
+@media (max-width:630px){
+    .heading span{
+        font-size: 1.7rem;
+   
+    }
+  
+
+}
+@media (max-width:540px){
+    .heading span{
+        font-size: 1.3rem;
+   
+    }
+
+}
+@media (max-width:499px){
+    html{
+        font-size: 90%;
+    }
+    .heading span{
+        padding:.3rem .5rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
