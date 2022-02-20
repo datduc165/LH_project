@@ -1,0 +1,1 @@
+This is a small project to practice my knowleadge in HTML, CSS and JS by creating a single-page, resonpsible website.
